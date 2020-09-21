@@ -1,0 +1,213 @@
+;==========================================================
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;   go to https://github.com/polybar/polybar
+;==========================================================
+
+[cls]
+background = #2b2e39
+background-alt = #44475a
+foreground = #f8f8f2
+foreground-alt = #6272a4
+primary = #8be9fd
+secondary = #bd93f9
+alert = #ff5555
+
+[bar/example]
+width = 100%
+height = 17
+fixed-center = false
+
+background = ${cls.background}
+foreground = ${cls.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 1
+
+font-0 = Source Code Variable:style=Bold:pixelsize=11;2
+font-1 = Hack NF:pixelsize=16;2
+
+modules-left = bspwm xwindow xkeyboard
+modules-center =
+modules-right = date eth pulseaudio cpu memory
+
+tray-position = right
+tray-padding = 5
+ 
+;wm-restack = bspwm
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/xwindow]
+type = internal/xwindow
+label = %{B#cc000000 F#2b2e39} %{B#cc000000 F#f8f8f2}%title:0:50:...% %{B#cc000000 F#2b2e39}
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+label-layout=
+
+label-indicator-padding = 1
+label-indicator-margin = 0
+label-indicator-background = ${cls.alert}
+label-indicator-underline = ${cls.alert}
+label-indicator-foreground = ${cls.background}
+
+[module/bspwm]
+type = internal/bspwm
+;format-prefix = " # "
+
+label-focused = %{B#8be9fd F#2b2e39} %{B#8be9fd F#2b2e39}%name% %{B#2b2e39 F#8be9fd}
+;label-focused-background = ${cls.background-alt}
+;label-focused-underline= ${cls.primary}
+label-focused-padding = 0 
+
+label-occupied = %name%
+label-occupied-background = ${cls.background}
+label-occupied-foreground = ${cls.foreground}
+label-occupied-padding = 1
+
+label-urgent = %{B#ff5555 F#2b2e39} %{B#ff5555 F#2b2e39}%name% %{B#2b2e39 F#ff5555}
+;label-urgent-background = ${cls.alert}
+;label-urgent-foreground = ${cls.background}
+label-urgent-padding = 1
+
+label-empty = %name%
+label-empty-foreground = ${cls.foreground-alt}
+label-empty-padding = 1
+
+;label-separator = 
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "%{B#2b2e39 F#3498db}%{B#3498db F#2b2e39} "
+;format-prefix-foreground = ${cls.foreground-alt}
+;format-prefix-background = 
+;format-underline = #8be9fd
+label = "%{B#3498db F#2b2e39} %percentage:2% %{B#3498db F#2b2e39}"
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "%{B#2b2e39 F#bd93f9}%{B#bd93f9 F#2b2e39} "
+;label-background = ${cls.secondary}
+;format-prefix-foreground = ${cls.secondary}
+;format-prefix-background = ${cls.background}
+;format-underline = #ffb86c
+label = "%{B#bd93f9 F#2b2e39} %percentage_used% %{B#bd93f9 F#2b2e39}"
+
+[module/wlan]
+type = internal/network
+interface = net1
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = #9f78e1
+label-connected = %essid%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${cls.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${cls.foreground-alt}
+
+[module/eth]
+type = internal/network
+interface = ens2
+interval = 3.0
+
+;format-connected-underline = #5294e2
+format-connected-prefix = " " 
+format-connected-prefix-foreground = #34ace0
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${cls.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = %d
+date-alt = %Y/%m/%d
+
+time = %H'%M
+time-alt = %H'%M"%S
+
+format-prefix =
+format-prefix-foreground = ${cls.foreground-alt}
+;format-underline = #bd93f9
+
+label = "%{B#2b2e39 F#33d9b2}%date% %{B#2b2e39 F#f8f8f2}%time%"
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = "<label-volume>'<bar-volume>"
+label-volume = %percentage%
+label-volume-foreground = #f1fa8c
+
+label-muted = " ﱝ "
+label-muted-foreground = ${cls.alert}
+
+bar-volume-width = 5
+bar-volume-foreground-0 = #50fa7b
+bar-volume-foreground-1 = #50fa7b
+bar-volume-foreground-2 = #50fa7b
+bar-volume-foreground-3 = #50fa7b
+bar-volume-foreground-4 = #8be9fd
+bar-volume-foreground-5 = #ffb86c
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = :
+bar-volume-indicator-font = 1
+bar-volume-fill = :
+bar-volume-fill-font = 1
+bar-volume-empty = .
+bar-volume-empty-font = 1
+bar-volume-empty-foreground = ${cls.foreground-alt}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini

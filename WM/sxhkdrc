@@ -1,0 +1,183 @@
+#........................................................@!
+#==================== Jess Config
+#·········································>
+
+#
+# RUNPrograms => 'super + shift + []'
+#·············································································@!
+
+#=> Terminal[ThisIsTheException]
+super + Return
+    termite
+
+#=> ProgramLauncher
+super + space
+    rofi -combi-modi window,drun -show combi -modi combi
+    #dmenu_run
+
+#=> WebBrowser
+super + shift + w
+    chromium
+
+#=> FileManager
+XF86Explorer
+    pcmanfm
+
+#=> Telegram
+super + shift + t
+    exec ~/perf_linux_src/app_image/Telegram/Telegram
+    
+#=> KeePassXC
+super + shift + k
+    keepassxc
+
+#=> FlameShot
+Print
+    flameshot gui
+
+#=> Galculator
+XF86Calculator
+    galculator
+
+#·············································································!
+
+#
+# ManageBSPWM => 'super + alt + []'
+#·············································································@!
+
+#=> CloseFocusedWindow
+super + c
+    bspc node -c
+
+#=> SendFocusedWindow-toTheGivenDesk
+super + alt + {1-9,0}
+    bspc node -d '^{1-9,10}'
+
+#=> ExpandFocusedWindow
+super + alt + {h,j,k,l}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+#=> ContractFocusedWindow
+super + alt + shift + {h,j,k,l}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+#=> MoveAFloatingWindow
+super + alt + {u,i,o,p}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#=> PreselFeedbackDirection
+super + alt + {v,b,n,m}
+    bspc node -p {west,south,north,east}
+
+#=> CancelThePreselectionFor-theFocusedNode
+super + alt + space
+    bspc node -p cancel
+
+#=> PreselFeedbackRatio
+super + alt + shift + {1-9}
+    bspc node -o 0.{1-9}
+
+#-----> 'super + []'
+#···········································
+
+#=> FocusNode-inTheGivenDirection
+super + {h,j,k,l}
+    bspc node -f {west,south,north,east}
+
+#=> Focus-toTheGivenDesk
+super + {1-9,0}
+    bspc desktop -f '^{1-9,10}'
+
+#=> FocusPreviousDesk-inTheCurrentMonitor
+super + b
+    bspc desktop -f prev.local
+
+#=> FocusNextDesk-inTheCurrentMonitor
+super + n 
+    bspc desktop -f next.local
+
+#=> FocusTheLast-node/desktop
+super + {grave,Tab}
+    bspc {node,desktop} -f last
+
+#=> SetWindowState
+super + {t,p,s,f}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+#=> AlternateBetweenTheTiledAndMonocleLayout
+super + m
+    bspc desktop -l next
+
+#·············································································!
+
+#
+# SysControl => 'super + ctrl + []'
+#·············································································@!
+
+#=> KillFocusedWindowProcess
+super + ctrl + x
+    bspc node -k
+
+#=> RestartBSPWM
+super + ctrl + r
+    bspc wm -r
+
+#=> QuitBSPWM
+super + ctrl + q
+    bspc quit
+
+#=> LockScreen
+super + ctrl + l
+    i3lock-fancy -t "===> Try some boring password" -f Fira-Code-Medium
+
+#=> MakeSXHKDReloadItsConfigFiles
+super + ctrl + k
+    pkill -USR1 -x sxhkd
+
+#=> PulseAudio-VolumeControl
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+#·············································································!
+
+#......................................................................?
+# FromOriginalConfigFile[I didn't edit this part]
+#·······················································
+
+# set the node flags  
+#super + alt + {m,x,y,z}
+#    bspc node -g {marked,locked,sticky,private}
+
+# send the newest marked node to the newest preselected node
+#super + y
+#    bspc node newest.marked.local -n newest.!automatic.local
+
+# focus the node for the given path jump
+#super + {p,b,comma,period}
+#    bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous node in the current desktop
+#super + {_,alt + }c
+#    bspc node -f {next,prev}.local
+
+# swap the current node and the biggest node
+#super + g
+#    bspc node -s biggest
+
+
+
+# focus the older or newer node in the focus history
+#super + {o,i}
+#    bspc wm -h off; \
+#    bspc node {older,newer} -f; \
+#    bspc wm -h on
+
+# cancel the preselection for the focused desktop
+#super + ctrl + shift + space
+#    bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
