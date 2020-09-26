@@ -10,10 +10,10 @@
 ;==========================================================
 
 [cls]
-background = #2b2e39
+background = #112022
 background-alt = #44475a
 foreground = #f8f8f2
-foreground-alt = #6272a4
+foreground-alt = #4a70b0
 primary = #8be9fd
 secondary = #bd93f9
 alert = #ff5555
@@ -38,7 +38,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = Source Code Variable:style=Bold:pixelsize=11;2
+font-0 = Source Code Pro for Powerline:style=Semibold:pixelsize=11.3;2
 font-1 = Hack NF:pixelsize=16;2
 
 modules-left = bspwm xwindow xkeyboard
@@ -59,7 +59,7 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %{B#cc000000 F#2b2e39} %{B#cc000000 F#f8f8f2}%title:0:50:...% %{B#cc000000 F#2b2e39}
+label = %{B#b3a78ced F#112022} %{B#b3a78ced F#ff000000}%title:0:50:...% %{B#b3a78ced F#112022}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -77,7 +77,7 @@ label-indicator-foreground = ${cls.background}
 type = internal/bspwm
 ;format-prefix = " # "
 
-label-focused = %{B#8be9fd F#2b2e39} %{B#8be9fd F#2b2e39}%name% %{B#2b2e39 F#8be9fd}
+label-focused = %{B#8be9fd F#112022} %{B#8be9fd F#112022}%name% %{B#112022 F#8be9fd}
 ;label-focused-background = ${cls.background-alt}
 ;label-focused-underline= ${cls.primary}
 label-focused-padding = 0 
@@ -87,7 +87,7 @@ label-occupied-background = ${cls.background}
 label-occupied-foreground = ${cls.foreground}
 label-occupied-padding = 1
 
-label-urgent = %{B#ff5555 F#2b2e39} %{B#ff5555 F#2b2e39}%name% %{B#2b2e39 F#ff5555}
+label-urgent = %{B#ff5555 F#112022} %{B#ff5555 F#112022}%name% %{B#112022 F#ff5555}
 ;label-urgent-background = ${cls.alert}
 ;label-urgent-foreground = ${cls.background}
 label-urgent-padding = 1
@@ -101,21 +101,21 @@ label-empty-padding = 1
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "%{B#2b2e39 F#3498db}%{B#3498db F#2b2e39} "
+format-prefix = "%{B#112022 F#8194c7}%{B#8194c7 F#ff112022} "
 ;format-prefix-foreground = ${cls.foreground-alt}
 ;format-prefix-background = 
 ;format-underline = #8be9fd
-label = "%{B#3498db F#2b2e39} %percentage:2% %{B#3498db F#2b2e39}"
+label = "%{B#8194c7 F#ff112022} %percentage:2% %{B#8194c7 F#112022}"
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "%{B#2b2e39 F#bd93f9}%{B#bd93f9 F#2b2e39} "
+format-prefix = "%{B#112022 F#84bd9c}%{B#84bd9c F#112022} "
 ;label-background = ${cls.secondary}
 ;format-prefix-foreground = ${cls.secondary}
 ;format-prefix-background = ${cls.background}
 ;format-underline = #ffb86c
-label = "%{B#bd93f9 F#2b2e39} %percentage_used% %{B#bd93f9 F#2b2e39}"
+label = "%{B#84bd9c F#112022} %percentage_used% %{B#84bd9c F#112022}"
 
 [module/wlan]
 type = internal/network
@@ -146,7 +146,7 @@ interval = 3.0
 
 ;format-connected-underline = #5294e2
 format-connected-prefix = " " 
-format-connected-prefix-foreground = #34ace0
+format-connected-prefix-foreground = #F7BD43
 label-connected = %local_ip%
 
 format-disconnected =
@@ -169,14 +169,14 @@ format-prefix =
 format-prefix-foreground = ${cls.foreground-alt}
 ;format-underline = #bd93f9
 
-label = "%{B#2b2e39 F#33d9b2}%date% %{B#2b2e39 F#f8f8f2}%time%"
+label = "%{B#112022 F#F7BD43}%date% %{B#112022 F#f8f8f2}%time%"
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 format-volume = "<label-volume>'<bar-volume>"
 label-volume = %percentage%
-label-volume-foreground = #f1fa8c
+label-volume-foreground = #F7BD43
 
 label-muted = " ﱝ "
 label-muted-foreground = ${cls.alert}
