@@ -1,7 +1,7 @@
 <h1>My dotfiles backup repo.</h1>
 
 <p>Recommended System: Archlinux</p>
-<p>Recommended Editor: NeoVim</p>
+<p>Recommended Editor: Neovim</p>
 
 <h2>Paths</h2>
 
@@ -19,3 +19,6 @@
 <p>**redshift** ==> ~/.config/redshift.conf</p>
 <p>**gtktheme** ==> ~/.config/gtk-3.0/settings.ini</p>
 
+<h2>Preview</h2>
+
+!(./.preview/prev.png)
