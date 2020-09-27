@@ -21,4 +21,4 @@
 
 <h2>Preview</h2>
 
-![prev.png] (https://github.com/jessdot/dotarc/blob/master/preview/prev.png)
+![0MgLm7L.png] (https://i.imgur.com/0MgLm7L.png)
