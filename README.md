@@ -21,4 +21,4 @@
 
 <h2>Preview</h2>
 
-![0MgLm7L.png] (https://i.imgur.com/0MgLm7L.png)
+<img src="https://i.imgur.com/0MgLm7L.png">
