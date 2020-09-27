@@ -1,29 +1,29 @@
 [options]
 allow_bold = true
-audible_bell = false
+#audible_bell = false
 #bold_is_bright = true
-cell_height_scale = 1.0
-cell_width_scale = 1.0
-#clickable_url = true
+#cell_height_scale = 1.0
+#cell_width_scale = 1.0
+clickable_url = true
 dynamic_title = true
-font = Source Code Pro for Powerline Semibold 11.5
+font =  Source Code Pro for Powerline Medium 11.5
 #fullscreen = true
 #icon_name = terminal
-mouse_autohide = true
+#mouse_autohide = false
 #scroll_on_output = false
 #scroll_on_keystroke = true
 # Length of the scrollback buffer, 0 disabled the scrollback buffer
 # and setting it to a negative value means "infinite scrollback"
-scrollback_lines = 15000
+scrollback_lines = 10000
 #search_wrap = true
 #urgent_on_bell = true
 #hyperlinks = false
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-#browser = xdg-open
+browser = xdg-open
 
 # "system", "on" or "off"
-cursor_blink = on
+cursor_blink = system
 
 # "block", "underline" or "ibeam"
 cursor_shape = block
@@ -40,101 +40,37 @@ cursor_shape = block
 # "off", "left" or "right"
 #scrollbar = off
 
+# ====================================
 [colors]
-# Base16 Nord
-# Author: arcticicestudio
 
-foreground          = #E5E9F0
-foreground_bold     = #E5E9F0
-#cursor              = #E5E9F0
-#cursor_foreground   = #2E3440
-background          = rgba (63, 63, 63, 0.8)
+# https://github.com/chriskempson/base16-xresources/blob/master/base16-atelierlakeside.dark.256.xresources
+# Base16 Atelier Lakeside
+# Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/lakeside/)
+foreground=#7ea2b4
+background=rgba(30,30,30,0.9)
+#background=#161b1d
+#cursor=#7ea2b4
 
-# 16 color space
+color0=#161b1d
+color1=#d22d72
+color2=#568c3b
+color3=#8a8a0f
+color4=#257fad
+color5=#5d5db1
+color6=#2d8f6f
+color7=#7ea2b4
+color8=#5a7b8c
+color9=#d22d72
+color10=#568c3b
+color11=#8a8a0f
+color12=#257fad
+color13=#5d5db1
+color14=#2d8f6f
+color15=#ebf8ff
 
-# Black, Gray, Silver, White
-color0  = #2E3440
-color8  = #4C566A
-color7  = #E5E9F0
-color15 = #8FBCBB
-
-# Red
-color1  = #88C0D0
-color9  = #88C0D0
-
-# Green
-color2  = #BF616A
-color10 = #BF616A
-
-# Yellow
-color3  = #5E81AC
-color11 = #5E81AC
-
-# Blue
-color4  = #bf616a
-color12 = #EBCB8B
-
-# Purple
-color5  = #A3BE8C
-color13 = #A3BE8C
-
-# Teal
-color6  = #D08770
-color14 = #D08770
-
-# Extra colors
-color16 = #81A1C1
-color17 = #B48EAD
-color18 = #3B4252
-color19 = #434C5E
-color20 = #D8DEE9
-color21 = #ECEFF4
-
-
-
-#[colors] (ORIGINALS)
-# If both of these are unset, cursor falls back to the foreground color,
-# and cursor_foreground falls back to the background color.
-#cursor = #dcdccc
-#cursor_foreground = #dcdccc
-
-#foreground = #dcdccc
-#foreground_bold = #ffffff
-#background = #cc3f3f3f
-
-# 20% background transparency (requires a compositor)
-#background = rgba(63, 63, 63, 0.8)
-
-# If unset, will reverse foreground and background
-#highlight = #2f2f2f
-
-# Colors from color0 to color254 can be set
-#color0 = #3f3f3f
-#color1 = #705050
-#color2 = #60b48a
-#color3 = #dfaf8f
-#color4 = #506070
-#color5 = #dc8cc3
-#color6 = #8cd0d3
-#color7 = #dcdccc
-#color8 = #709080
-#color9 = #dca3a3
-#color10 = #c3bf9f
-#color11 = #f0dfaf
-#color12 = #94bff3
-#color13 = #ec93d3
-#color14 = #93e0e3
-#color15 = #ffffff
-
-[hints]
-#font = Monospace 12
-#foreground = #dcdccc
-#background = #3f3f3f
-#active_foreground = #e68080
-#active_background = #3f3f3f
-#padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
-
-# vim: ft=dosini cms=#%s
+color16=#935c25
+color17=#b72dd2
+color18=#1f292e
+color19=#516d7b
+color20=#7195a8
+color21=#c1e4f6
