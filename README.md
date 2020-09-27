@@ -21,4 +21,4 @@
 
 <h2>Preview</h2>
 
-!(./.preview/prev.png)
+!(.preview/prev.png)
