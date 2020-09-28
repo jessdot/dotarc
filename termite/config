@@ -43,34 +43,34 @@ cursor_shape = block
 # ====================================
 [colors]
 
-# https://github.com/chriskempson/base16-xresources/blob/master/base16-atelierlakeside.dark.256.xresources
-# Base16 Atelier Lakeside
-# Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/lakeside/)
-foreground=#7ea2b4
+# https://github.com/chriskempson/base16-xresources/blob/master/base16-harmonic16.dark.256.xresources
+# Base16 harmonic16
+# Scheme: Jannik Siebert (https://github.com/janniks)
+foreground=#cbd6e2
 background=rgba(30,30,30,0.9)
-#background=#161b1d
-#cursor=#7ea2b4
+#background=#0b1c2c
+#cursor=#cbd6e2
 
-color0=#161b1d
-color1=#d22d72
-color2=#568c3b
-color3=#8a8a0f
-color4=#257fad
-color5=#5d5db1
-color6=#2d8f6f
-color7=#7ea2b4
-color8=#5a7b8c
-color9=#d22d72
-color10=#568c3b
-color11=#8a8a0f
-color12=#257fad
-color13=#5d5db1
-color14=#2d8f6f
-color15=#ebf8ff
+color0=#0b1c2c
+color1=#bf8b56
+color2=#56bf8b
+color3=#8bbf56
+color4=#8b56bf
+color5=#bf568b
+color6=#568bbf
+color7=#cbd6e2
+color8=#627e99
+color9=#bf8b56
+color10=#56bf8b
+color11=#8bbf56
+color12=#8b56bf
+color13=#bf568b
+color14=#568bbf
+color15=#f7f9fb
 
-color16=#935c25
-color17=#b72dd2
-color18=#1f292e
-color19=#516d7b
-color20=#7195a8
-color21=#c1e4f6
+color16=#bfbf56
+color17=#bf5656
+color18=#223b54
+color19=#405c79
+color20=#aabcce
+color21=#e5ebf1

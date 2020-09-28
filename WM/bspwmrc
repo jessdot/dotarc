@@ -12,7 +12,7 @@ bspc config pointer_modifier mod1
 #
 # wmname LG3D & # for java applications
 picom &
-feh --no-fehbg --bg-fill ~/perf_linux_src/res_bgrds/dodge-charger-srt-hellcat-2020-4k-mz.jpg &
+feh --no-fehbg --bg-fill ~/perf_linux_src/res_bgrds/land-art/alena-aenami-rooflinesgirl-1k-2.jpg &
 ~/.config/polybar/launch.sh &
 dunst &
 bspc monitor -d I II III IV V VI 
