@@ -19,6 +19,8 @@
 <p><strong>redshift</strong> ==> ~/.config/redshift.conf</p>
 <p><strong>gtktheme</strong> ==> ~/.config/gtk-3.0/settings.ini</p>
 
+<!--
 <h2>Preview</h2>
 
 <img src="https://i.imgur.com/BBuWVTO.png">
+-->
